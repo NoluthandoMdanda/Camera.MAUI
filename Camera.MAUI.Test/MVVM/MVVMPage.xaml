@@ -12,11 +12,24 @@
     <ScrollView>
         <Grid>
             <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="200" BarCodeOptions="{Binding BarCodeOptions}" BarCodeResults="{Binding BarCodeResults, Mode=OneWayToSource}"
-                               Cameras="{Binding Cameras, Mode=OneWayToSource}" Camera="{Binding Camera}" AutoStartPreview="{Binding AutoStartPreview}" NumCamerasDetected="{Binding NumCameras, Mode=OneWayToSource}"
-                               AutoSnapShotAsImageSource="True" AutoSnapShotFormat="PNG" TakeAutoSnapShot="{Binding TakeSnapshot}" AutoSnapShotSeconds="{Binding SnapshotSeconds}"
-                               Microphones="{Binding Microphones, Mode=OneWayToSource}" Microphone="{Binding Microphone}" NumMicrophonesDetected="{Binding NumMicrophones, Mode=OneWayToSource}" 
-                               AutoRecordingFile="{Binding RecordingFile}" AutoStartRecording="{Binding AutoStartRecording}"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <cv:CameraView x:Name="cameraView" Grid.Row="0" Grid.Column="0" WidthRequest="300" HeightRequest="200" BarCodeOptions="{Binding BarCodeOptions}" BarCodeResults="{Binding BarCodeResults, Mode=OneWayToSource}"
+                           Cameras="{Binding Cameras, Mode=OneWayToSource}" Camera="{Binding Camera}" AutoStartPreview="{Binding AutoStartPreview}" NumCamerasDetected="{Binding NumCameras, Mode=OneWayToSource}"
+                           AutoSnapShotAsImageSource="True" AutoSnapShotFormat="PNG" TakeAutoSnapShot="{Binding TakeSnapshot}" AutoSnapShotSeconds="{Binding SnapshotSeconds}"
+                           Microphones="{Binding Microphones, Mode=OneWayToSource}" Microphone="{Binding Microphone}" NumMicrophonesDetected="{Binding NumMicrophones, Mode=OneWayToSource}" 
+                           AutoRecordingFile="{Binding RecordingFile}" AutoStartRecording="{Binding AutoStartRecording}" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                    <Image Source="C:\Users\thand\source\repos\Camera.MAUI\Camera.MAUI\grid2.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="300" HeightRequest="200"/>
+
+                </Grid>
                 <HorizontalStackLayout HorizontalOptions="Center" Margin="5">
                     <Label Text="Select a camera:" VerticalOptions="Center" BackgroundColor="White" TextColor="Black"/>
                     <Picker VerticalOptions="Center" TextColor="Black" ItemsSource="{Binding Cameras}" SelectedItem="{Binding Camera,Mode=TwoWay}"/>
