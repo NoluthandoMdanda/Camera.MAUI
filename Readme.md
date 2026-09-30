@@ -1,20 +1,13 @@
 
-# Camera.MAUI
+# Camera.MAUI (Fork)
 
-A cross‑platform .NET MAUI prototype built to test and refine camera functionality for a neonatal jaundice diagnostic workflow. This project explores image capture reliability, camera parameter control, and integration points needed for medical image processing.
+This is a fork of the Camera.MAUI library used as a dependency for my camera workflow prototypes. I used this repo to explore camera controls, test features, and contribute feedback relevant to medical imaging use cases.
 
-## Key Features
+## Why This Repo Exists
 
-- Camera preview and capture
-- Exposure, focus, and white‑balance adjustments
-- Image storage and transfer workflow
-- Testing environment for Bilimetrix diagnostic pipeline
+I forked this library to experiment with custom camera behavior and evaluate whether it met the requirements for Bilimetrix’s neonatal diagnostic workflow.
 
-### My Role
-
-I led camera workflow testing and integration, validating image quality requirements for medical diagnostics and documenting edge cases for engineering teams.
-
-#### Tech Stack
+### Tech Stack
 
 C#, .NET MAUI
 
