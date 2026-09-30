@@ -1,5 +1,5 @@
 
-# Camera.MAUI (Fork)
+# Camera.MAUI 📷(Fork)
 
 This is a fork of the Camera.MAUI library used as a dependency for my camera workflow prototypes. I used this repo to explore camera controls, test features, and contribute feedback relevant to medical imaging use cases.
 
